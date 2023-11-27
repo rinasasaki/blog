@@ -1,2 +1,5 @@
 ja:
   all_article: 記事一覧
+  countblog1: "記事が "
+  countblog2: "件あります"
+  create: "新規作成"

@@ -1,6 +1,6 @@
 <h1><%= t :all_article %></h1>
 
-ブログは今 <%= Article.public_count %> 件あります。
+<%= t :countblog1 %><%= Article.public_count %> <%= t :countblog2 %>
 
 <ul>
   <% @articles.each do |article| %>
@@ -12,4 +12,4 @@
   <% end %>
 </ul>
 
-<%= link_to "新規作成", new_article_path %>
+<%= link_to t(:create), new_article_path %>

@@ -29,3 +29,6 @@
 
 en:
   all_article: "Articles"
+  countblog1: "There are "
+  countblog2: "articles"
+  create: "create new article"
