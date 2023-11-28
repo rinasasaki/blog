@@ -15,7 +15,17 @@ module Blog
     # not contain `.rb` files, or that should not be reloaded or eager loaded.
     # Common ones are `templates`, `generators`, or `middleware`, for example.
 
-    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}').to_s]
+# アプリケーションが対応している言語のホワイトリスト
+config.i18n.available_locales = %i[ja en]
+
+# デフォルトの言語設定
+config.i18n.default_locale = :ja
+
+# 言語ファイル階層ごとに設定するための記述
+config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}').to_s]
+
+# Please use `Rails.root.join('path/to')` instead.と言われたら、下記のようにする。
+config.i18n.load_path += Dir[Rails.root.join('config/locales/**/*.{rb,yml}').to_s]
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
